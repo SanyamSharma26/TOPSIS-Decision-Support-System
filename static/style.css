@@ -1,0 +1,360 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #2d3748;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: #2d3748;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #4a5568;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #718096;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Info Box */
+.info-box {
+    background: #f7fafc;
+    border-left: 4px solid #667eea;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+.info-box h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.info-box ul {
+    list-style-position: inside;
+    color: #4a5568;
+}
+
+.info-box li {
+    margin-bottom: 8px;
+    padding-left: 10px;
+}
+
+/* Error Messages */
+.error-message {
+    background: #fed7d7;
+    border: 1px solid #fc8181;
+    color: #c53030;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.error-message strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="file"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: white;
+}
+
+.form-group input[type="file"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-group input[type="number"] {
+    font-family: monospace;
+}
+
+.form-group small {
+    display: block;
+    color: #718096;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* Criteria Grid */
+.criteria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .criteria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.criterion-card {
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+    transition: border-color 0.3s ease;
+}
+
+.criterion-card:hover {
+    border-color: #667eea;
+}
+
+.criterion-card h3 {
+    color: #667eea;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.btn-secondary:hover {
+    background: #cbd5e0;
+    transform: translateY(-2px);
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+/* Best Option Callout */
+.best-option-callout {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 30px 0;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.best-option-callout h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.best-id {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.rank-label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Results Info */
+.results-info {
+    text-align: center;
+    color: #718096;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.9rem;
+}
+
+.result-table thead {
+    background: #667eea;
+    color: white;
+}
+
+.result-table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 3px solid #5a67d8;
+}
+
+.result-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.result-table tbody tr:hover {
+    background: #f7fafc;
+}
+
+.result-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.result-table tbody tr:nth-child(even):hover {
+    background: #f7fafc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        padding: 25px 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .best-id {
+        font-size: 2rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .result-table {
+        font-size: 0.8rem;
+    }
+    
+    .result-table th,
+    .result-table td {
+        padding: 8px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .info-box {
+        padding: 15px;
+    }
+}
+
+/* Loading States */
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Accessibility */
+:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+select:focus,
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
