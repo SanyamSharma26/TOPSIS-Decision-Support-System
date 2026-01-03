@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configure TOPSIS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Configure TOPSIS</h1>
+            <p class="subtitle">Set weights and impacts for {{ criteria|length }} criteria ({{ num_alternatives }} alternatives)</p>
+            
+            {% if error %}
+            <div class="error-message">
+                <strong>Error:</strong> {{ error }}
+            </div>
+            {% endif %}
+            
+            <form action="/run" method="post">
+                <input type="hidden" name="token" value="{{ token }}">
+                
+                <div class="criteria-grid">
+                    {% for criterion in criteria %}
+                    <div class="criterion-card">
+                        <h3>{{ criterion.name }}</h3>
+                        
+                        <div class="form-group">
+                            <label for="weight_{{ loop.index0 }}">Weight:</label>
+                            <input 
+                                type="number" 
+                                id="weight_{{ loop.index0 }}" 
+                                name="weight_{{ loop.index0 }}" 
+                                step="any"
+                                min="0.000001"
+                                placeholder="e.g., 1.0 or 2.5"
+                                required
+                            >
+                            <small>Enter a positive number (decimals allowed)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="impact_{{ loop.index0 }}">Impact:</label>
+                            <select id="impact_{{ loop.index0 }}" name="impact_{{ loop.index0 }}" required>
+                                <option value="">-- Select Impact --</option>
+                                <option value="+">Benefit (+) - Higher is better</option>
+                                <option value="-">Cost (-) - Lower is better</option>
+                            </select>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Run TOPSIS</button>
+                    <a href="/" class="btn btn-secondary">Upload Another Dataset</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

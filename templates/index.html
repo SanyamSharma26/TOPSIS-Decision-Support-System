@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPSIS Decision Support System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>TOPSIS Decision Support System</h1>
+            <p class="subtitle">Multi-Criteria Decision Making Tool</p>
+            
+            {% if error %}
+            <div class="error-message">
+                <strong>Error:</strong> {{ error }}
+            </div>
+            {% endif %}
+            
+            <div class="info-box">
+                <h3>Dataset Requirements:</h3>
+                <ul>
+                    <li>Minimum 3 columns (1 ID column + at least 2 numeric criteria columns)</li>
+                    <li>First column will be treated as ID/Alternative name</li>
+                    <li>All criteria columns (from 2nd column onward) must be numeric</li>
+                    <li>No missing values in criteria columns</li>
+                    <li>Supported formats: CSV (.csv), Excel (.xlsx, .xls)</li>
+                </ul>
+            </div>
+            
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="dataset">Select Dataset File:</label>
+                    <input type="file" id="dataset" name="dataset" accept=".csv,.xlsx,.xls" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Upload Dataset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPSIS Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>TOPSIS Results</h1>
+            <p class="subtitle">Analysis Complete - {{ num_alternatives }} alternatives evaluated</p>
+            
+            <div class="best-option-callout">
+                <h2>🏆 Best Option</h2>
+                <p class="best-id">{{ best_id }}</p>
+                <p class="rank-label">(Rank 1)</p>
+            </div>
+            
+            <div class="results-info">
+                <p>Showing {{ showing_rows }} of {{ total_rows }} alternatives</p>
+            </div>
+            
+            <div class="table-container">
+                {{ table_html|safe }}
+            </div>
+            
+            <div class="button-group">
+                <a href="/download?token={{ token }}" class="btn btn-primary" download>Download Result CSV</a>
+                <a href="/" class="btn btn-secondary">Run Another Dataset</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
