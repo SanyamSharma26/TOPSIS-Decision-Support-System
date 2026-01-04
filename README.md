@@ -20,15 +20,15 @@ A complete web application for Multi-Criteria Decision Making using the TOPSIS (
 ## 📸 Screenshots
 
 ### Landing Page
-![Landing Page](screenshots/1-landing-page.png)
+![Landing Page](screenshots/01..png)
 *Upload your dataset to get started*
 
 ### Configuration Page
-![Configuration](screenshots/2-configure-page.png)
+![Configuration](02..png)
 *Set weights and impacts for each criterion*
 
 ### Results Page
-![Results](screenshots/3-results-page.png)
+![Results](screenshots/03..png)
 *View ranked alternatives with TOPSIS scores*
 
 ## 🚀 Live Demo
@@ -367,3 +367,4 @@ This project is provided as-is for educational and commercial use.
 Made with ❤️ by Sanyam Sharma
 
 </div>
+
